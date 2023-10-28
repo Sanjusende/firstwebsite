@@ -14,8 +14,8 @@ width: 100%;
     /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0 150px;
+    justify-content: center;
+    padding:80px;
     gap: 50px;
     position: fixed;
     z-index: 99;
@@ -26,6 +26,8 @@ width: 100%;
     background-color: #07b340;
     border-radius: 50%;
     position: fixed;
+    transform: all ease-in 0.5s;
+    cursor: pointer;
 }
 #cursor-b{
     height: 400px;
@@ -34,14 +36,25 @@ width: 100%;
     border-radius: 50%;
     position: fixed;
     filter:blur(30px);
+    cursor: pointer;
 
 }
-#cursor{
-    height: 25px;
-    width: 25px;
-    background-color: #16923f;
-    border-radius: 50%;
-    position: fixed;
+#nav >.btn{
+    padding: 10px;
+    border: 2px solid #07b340;
+    background: #000;
+    width: 250px;
+    height: 45px;
+    border-radius: 50px;
+    align-items: center;
+display: flex;
+justify-content: center;
+}
+#nav >.btn:hover{
+    background-color: #07b340;
+    transition: all ease 0.5s;
+
+
 }
 #nav img{
     height: 75px;
@@ -50,6 +63,11 @@ width: 100%;
 
     text-transform: uppercase;
     font-weight: 500px;
+}
+#nav h4:hover{
+color: #000;
+cursor: pointer;
+
 }
 video{
     width: 100%;
@@ -85,6 +103,7 @@ position: relative;
 
 
 }
+
 #page1 h2{
 margin-left: 430px;
 font-size: 25px;
@@ -92,16 +111,28 @@ font-size: 25px;
 #page1 p{
     margin-left: 350px; margin-top: 10px;
 }
-#page-1 >#arrow{
-    height: 200px;
-    width: 200px;
-    background-color: red; 
+#page1 #arrow{
+    height: 150px;
+    width: 150px;
+    background-color: transparent; 
     position: absolute;
     display: flex;
      align-items: center;
      justify-content: center;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 3px solid #a1e424;
+    left: -30px;
+    bottom: 5px;
+    transition: all ease  0.5s;
+}
+#page1 #arrow:hover{
+    scale: 0.4;
+    background-color: #95C11E;
+    cursor: pointer;
+}
+#arrow i{
+    font-size: 40px;
+    font-weight: 100px;
 }
 #page2{
     height: 100vh;
@@ -182,6 +213,7 @@ margin-bottom: 30px;
 #about-us-1 p{
     font-size: 20px;
     line-height: 26px;
+    color: #fff;
 }
 #cards-container{
     /* background-color: red; */
@@ -206,13 +238,13 @@ margin-bottom: 30px;
 
 }
 #card-1{
-    background-image: url(home-toptracer-1024x682.avif);
+    background-image: url(home-toptracer-1024x682.webp);
 }
 #card-2{
     background-image: url(hero-4.webp);
 }
 #card-3{
-    background-image: url(home-lessons-1024x682.avif);
+    background-image: url(home-lessons-1024x682.webp);
 }
 .overlay{
     height: 100%;width: 100%;
@@ -241,8 +273,9 @@ font-weight: 800px;
     opacity: 1;
 }
 .cards:hover{
-    transform: rotate3d(-1,1,0,20deg);
+    transform:rotate3d(-1,1,0,-20deg);
 }
+
 #green-div{
     height: 30vh;
     display: flex;
@@ -263,6 +296,7 @@ color: transparent;
 #green-div img{
     height: 100%;
 object-fit: cover;
+width: 15%;
 }
 #page-3{
     height: 100vh;
@@ -278,13 +312,13 @@ object-fit: cover;
     line-height: 45px;
     width: 55%;
     text-align: center;position: relative;
+    color: white;
 }
 #page-3 img{
     position: absolute;
     height: 60px;
 }
 #page-3 #colon-1{
-
     margin-left: -70%;
     margin-bottom: 20%;
 }
@@ -315,7 +349,7 @@ width: 100%;
 .elem  h2{
     height: 100%;
     width: 100%;
-    background-color: #21cf29;
+    background-color: #b1e638;
 align-items: center;
     display: flex;
     justify-content: center;
@@ -352,26 +386,48 @@ align-items: center;
     -webkit-text-stroke: 2px white;
 }
 #footer{
-    height: 35vh;width: 100%;
-    background: linear-gradient(to left bottom,hwb(123 2% 22%),#94af4b);
+    height: 50vh;width: 100%;
+    background: linear-gradient(to left bottom,hwb(96 1% 11%),#87a13d);
     display: flex;
     justify-content:center;
     align-items: center;
     gap: 80px;
-    -webkit-text-stroke: 2px rgb(37, 34, 34);
-    font-size: 20px;
+    /* -webkit-text-stroke: 2px rgb(37, 34, 34); */
+    font-size: 25px;
     line-height: 1.7;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
 }
-#footer >img{
+#footer >#logo{
     height: 90px;
     object-fit: cover;
+    position: relative;
+    margin-top: -50px;
+
+    margin-left: -200px;
+}
+#footer >#i1{
+    margin-left: -120px;
+
+    margin-top: 150px;
+    
+}
+#footer >#i2{
+    margin-left: -140px;
+    margin-top: 150px;
 }
 #footer #dotimg{
     height: 100%;
-    object-fit: cover;
+    width: 20%;
+    object-fit: cover; margin-left: -150px;
+
 }
-#footer span{
-    font-size: 12px;
+#footer h4{
+color: #000;
+}
+.f-div>p{
+    font-size: 14px;color: #000;
+
 
 }

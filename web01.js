@@ -3,12 +3,13 @@ let crsr=document.querySelector("#cursor")
 let blur=document.querySelector("#cursor-b")
 
 document.addEventListener("mousemove",(dets)=>{
-    crsr.style.left=dets.x+"px";
+    crsr.style.left=dets.x+3+"px";
     crsr.style.top=dets.y+"px";
     blur.style.left=dets.x -200+"px";
     blur.style.top=dets.y -200+"px";
 })
- let h4all=document.querySelectorAll("#nav h4")
+
+ let h4all=document.querySelectorAll("#nav  h4")
  h4all.forEach((elem)=>{
 elem.addEventListener("mouseenter",()=>{
 
@@ -20,9 +21,26 @@ elem.addEventListener("mouseleave",()=>{
 
     crsr.style.scale=1
     crsr.style.border=" 1px solid #fff"
-    crsr.style.backgroundColor="transparent"
+    crsr.style.backgroundColor="#07b340";
 })
  })
+
+ let h4all1=document.querySelectorAll("#footer   i")
+ h4all1.forEach((elem)=>{
+elem.addEventListener("mouseenter",()=>{
+
+    crsr.style.scale=3
+    crsr.style.border=" 1px solid #fff"
+    crsr.style.backgroundColor="transparent"
+})
+elem.addEventListener("mouseleave",()=>{
+
+    crsr.style.scale=1
+    crsr.style.border=" 1px solid #fff"
+    crsr.style.backgroundColor="#07b340";
+})
+ })
+
  let cards=document.querySelectorAll(".cards")
 cards.forEach((elem)=>{
 elem.addEventListener("mouseenter",()=>{
@@ -35,7 +53,22 @@ elem.addEventListener("mouseleave",()=>{
 
     crsr.style.scale=1
     crsr.style.border=" 1px solid #fff"
-    crsr.style.backgroundColor="transparent"
+    crsr.style.backgroundColor="#07b340";
+})
+ })
+ let arrow=document.querySelectorAll(" #page1 #arrow")
+arrow.forEach((elem)=>{
+elem.addEventListener("mouseenter",()=>{
+
+    crsr.style.scale=3
+    crsr.style.border=" 1px solid #fff"
+    crsr.style.backgroundColor="transparent";
+})
+elem.addEventListener("mouseleave",()=>{
+
+    crsr.style.scale=1
+    crsr.style.border=" 1px solid #fff"
+    crsr.style.backgroundColor="#07b340";
 })
  })
 
